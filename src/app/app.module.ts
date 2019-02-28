@@ -19,7 +19,8 @@ import {
   MatRippleModule,
   MatSlideToggleModule,
   MatSnackBarModule,
-  MatTabsModule
+  MatTabsModule,
+  MatTooltipModule
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { NguCarouselModule } from '@ngu/carousel';
@@ -34,6 +35,8 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AuthService } from './shared/services/auth/auth.service';
 import { CountUpModule } from 'countup.js-angular2';
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { ComponentsModule } from './components/components.module';
 
 const config: SocketIoConfig = { url: 'http://localhost:8080', options: {} };
 
@@ -49,27 +52,22 @@ const config: SocketIoConfig = { url: 'http://localhost:8080', options: {} };
     AngularFireAuthModule,
     RouterModule.forRoot(rootRouterConfig, { useHash: false }),
     MatIconModule,
-    MatCardModule,
-    MatMenuModule,
+    ComponentsModule,
     MatButtonModule,
-    MatChipsModule,
     MatInputModule,
-    MatListModule,
     MatRippleModule,
     MatSlideToggleModule,
-    MatSnackBarModule,
-    MatTabsModule,
     FlexLayoutModule,
-    NguCarouselModule,
     CountUpModule,
-    // SocketIoModule.forRoot(config)
+    MatTooltipModule,
+    SocketIoModule.forRoot(config)
   ],
   declarations: [
     AppComponent,
     LandingPageComponent,
     HeaderComponent,
-    FooterComponent,
-    SignInComponent
+    SignInComponent,
+    AdminLayoutComponent
   ],
   providers: [WINDOW_PROVIDERS, AuthService],
   bootstrap: [AppComponent]

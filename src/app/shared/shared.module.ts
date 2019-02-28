@@ -47,14 +47,10 @@ const classesToInclude = [
     FormsModule,
     RouterModule,
     FlexLayoutModule,
-    MatMenuModule,
-    MatSnackBarModule,
     MatIconModule,
     MatButtonModule,
-    MatCardModule,
     MatProgressSpinnerModule,
-    MatRippleModule,
-    MatDialogModule
+    MatRippleModule
   ],
   entryComponents: [AppLoaderComponent],
   providers: [AuthGuard, AppLoaderService, LandingFixService, UIHelperService],

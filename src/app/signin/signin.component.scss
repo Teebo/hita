@@ -2,14 +2,15 @@
 
 .form-btn {
   color: #6c63ff;
-  margin: 2%;
+  margin: 1%;
 }
 
 .form-btn-wrapper {
-  position: absolute !important;
-  left: 32% !important;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
 }
 
 @media(max-width: 767px) {

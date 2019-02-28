@@ -14,21 +14,21 @@ export class LandingPageComponent implements OnInit, OnDestroy {
 
   constructor(
     private fix: LandingFixService,
-    private uiHelperService: UIHelperService
-  ) // private socket: Socket
-  {}
+    private uiHelperService: UIHelperService,
+    private socket: Socket
+  ) {}
 
   ngOnInit() {
-    // this.socket.on('connect', () => {
-    //   console.log('Connected');
-    //   this.socket.emit('getTweets');
-    // });
+    this.socket.on('connect', () => {
+      console.log('Connected');
+      this.socket.emit('getTweets');
+    });
 
-    // this.socket.on('tweets', (d) => {
-    //   console.log(d);
-    //   this.tweets.push(d);
-    //   console.log(this.tweets);
-    // });
+    this.socket.on('tweets', d => {
+      console.log(d);
+      this.tweets.push(d);
+      console.log(this.tweets);
+    });
 
     this.uiHelperService
       .getObservableCanStartCountUpValue()
@@ -41,6 +41,7 @@ export class LandingPageComponent implements OnInit, OnDestroy {
     this.fix.addFix();
   }
   ngOnDestroy() {
+    this.socket.removeListener('tweets');
     this.fix.removeFix();
   }
 }

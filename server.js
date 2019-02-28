@@ -30,7 +30,7 @@ app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname + '/dist/index.html'));
 });
 
-const stream = client.stream('statuses/filter', { track: 'marketing' });
+const stream = client.stream('statuses/filter', { track: 'advertising' });
 
 stream.on('data', event => {
   io.emit('tweets', event.text);

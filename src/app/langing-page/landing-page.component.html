@@ -73,7 +73,8 @@
       </div>
       <div fxFlex="50" fxLayout="column">
         <p fxFlex="50">Live tweets</p>
-        <h1 class="number-count" fxFlex="50">tweets</h1>
+        <h1 [ngStyle]="{'font-size': '60px',
+        'font-weight': 'lighter'}"  class="number-count" fxFlex="50">{{tweets.length}}</h1>
       </div>
     </div>
   </div>

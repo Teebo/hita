@@ -16,7 +16,8 @@ export class AppComponent implements OnInit {
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe(() => {
-        if (window.location.pathname.includes('sign-in')) {
+        console.log(window.location.pathname);
+        if (window.location.pathname !== '/') {
           this.isNavHidden = true;
         } else {
           this.isNavHidden = false;

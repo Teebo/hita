@@ -1,26 +1,8 @@
-<!-- <h1 *ngIf="authService.user | async">Welcome {{ (authService.user | async)?.email }}!</h1>
-
-<div *ngIf="!(authService.user | async)">
-  <input type="email" [(ngModel)]="email" placeholder="email">
-  <input type="password" [(ngModel)]="password" placeholder="email">
-
-  <button (click)="signup()" [disabled]="!email || !password">
-    Signup
-  </button>
-
-  <button (click)="login()" [disabled]="!email || !password">
-    Login
-  </button>
-</div>
-
-<button (click)="logout()" *ngIf="authService.user | async">
-  Logout
-</button> -->
 <section id="contact-section" class="gap bg-grey">
     <div class="container">
         <div fxLayout='column' class="text-center mb-5">
             <div fxFlex.gt-md="60%">
-                <h2 class="title-page">Sign in / Sign up</h2>
+                <h2>Sign in / Sign up</h2>
             </div>
         </div>
         <form>
