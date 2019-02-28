@@ -532,17 +532,17 @@ if(false) {}
 
 /***/ }),
 
-/***/ 2:
+/***/ 3:
 /*!******************************************!*\
   !*** multi ./src/assets/styles/app.scss ***!
   \******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/mamy/heroku/angular/hita-js/src/assets/styles/app.scss */"./src/assets/styles/app.scss");
+module.exports = __webpack_require__(/*! /home/teebo/Development/hita/src/assets/styles/app.scss */"./src/assets/styles/app.scss");
 
 
 /***/ })
 
-},[[2,"runtime"]]]);
+},[[3,"runtime"]]]);
 //# sourceMappingURL=styles.js.map

@@ -1,0 +1,19 @@
+
+
+.form-btn {
+  color: #6c63ff;
+  margin: 2%;
+}
+
+.form-btn-wrapper {
+  position: absolute !important;
+  left: 32% !important;
+  display: flex;
+  flex-direction: row;
+}
+
+@media(max-width: 767px) {
+  .form-btn-wrapper {
+    left: 5% !important;
+  }
+}

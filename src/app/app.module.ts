@@ -32,6 +32,10 @@ import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AuthService } from './shared/services/auth/auth.service';
+import { CountUpModule } from 'countup.js-angular2';
+import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+
+const config: SocketIoConfig = { url: 'http://localhost:8080', options: {} };
 
 @NgModule({
   imports: [
@@ -56,7 +60,9 @@ import { AuthService } from './shared/services/auth/auth.service';
     MatSnackBarModule,
     MatTabsModule,
     FlexLayoutModule,
-    NguCarouselModule
+    NguCarouselModule,
+    CountUpModule,
+    // SocketIoModule.forRoot(config)
   ],
   declarations: [
     AppComponent,
