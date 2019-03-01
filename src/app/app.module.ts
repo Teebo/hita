@@ -38,7 +38,13 @@ import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { ComponentsModule } from './components/components.module';
 
-const config: SocketIoConfig = { url: 'http://localhost:8080', options: {} };
+let url = 'http://localhost:8080';
+
+if (environment.production) {
+  url = 'https://hita-app.herokuapp.com:3026';
+}
+
+const config: SocketIoConfig = { url, options: {} };
 
 @NgModule({
   imports: [
